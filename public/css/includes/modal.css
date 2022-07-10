@@ -1,0 +1,92 @@
+#modalWindow {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.modalContainer {
+	max-height: calc(100% - 40px);
+
+	overflow-y: auto;
+
+	padding: 10px;
+	margin: 10px auto;
+
+	border-radius: .4rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	background-color: var(--primary-color);
+}
+
+#createModal {
+	position: relative;
+	display: hidden;
+	flex-direction: column;
+
+	width: 70%;
+	height: auto;
+}
+
+#cmdPalette {
+	position: relative;
+	display: none;
+	flex-direction: column;
+
+	width: 70%;
+	height: auto;
+}
+
+#modalHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	padding-bottom: 40px;
+	font-weight: 700;
+}
+
+#modalExit {
+	transition-property: color;
+	transition-duration: 150ms;
+	transition-timing-function: ease-in;
+}
+
+#modalExit > span {
+	transition-property: padding;
+	transition-duration: 150ms;
+	transition-timing-function: ease-in;
+}
+
+#modalExit:hover {
+	color: var(--heavy-warning);
+}
+
+#modalExit:hover > span {
+	padding: 0 5px;
+}
+
+#inputContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	height: 100%;
+}
+
+#inputForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#inputForm > label {
+	color: var(--primary-text-color);
+}
+
+#inputErrorDisp {
+	padding-bottom: 25px;
+}
