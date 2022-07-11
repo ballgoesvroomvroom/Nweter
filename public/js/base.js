@@ -70,6 +70,9 @@ $(document).ready(() => {
 		// show frame
 		$yearFrames[current_str].removeClass("hidden");
 
+		// scroll to the top
+		window.scrollTo({ top: 0, behavior: "smooth" });
+
 		// update visuals
 		year = year.toString();
 		$selectors["track-year-disp"].text(`${current_str.slice(0, 2)}:${current_str.slice(2)}`);

@@ -39,7 +39,7 @@
 
 #track-runner {
 	position: relative;
-	width: 25%;
+	width: 0;
 	height: 100%;
 
 	border-radius: 2px;
@@ -149,7 +149,7 @@
 	flex-direction: column;
 
 	width: min(80%, 900px);
-	height: 500px;
+	height: auto;
 
 	overflow-y: clip;
 	border-radius: .4rem;
@@ -165,14 +165,15 @@
 .project-card > .description {
 	padding: 5px;
 	padding-right: 400px;
-	margin: 10px 0;
+	margin-top: 10px;
 }
 
 .project-card > .cover-container {
 	position: relative;
 
 	width: 100%;
-	min-height: 0;
+	min-height: 50px;
+	max-height: 500px;
 }
 
 .project-card > .cover-container > .cover {
@@ -274,12 +275,6 @@ a.project-side-menu:hover {
 }
 
 
-/* SMALL CARDS CONTAINER */
-.small.project-card-container > .project-card {
-	height: auto;
-}
-
-
 /* RIGHT DIRECTED CARD CONTAINERS */
 .right.project-card-container {
 	flex-direction: row-reverse;
@@ -292,4 +287,14 @@ a.project-side-menu:hover {
 .right.project-card-container .project-side-menu.more > img {
 	margin: 0;
 	margin-right: 2px;
+}
+
+@media only screen and (max-width: 800px) {
+	.project-card-container {
+		margin-top: 80px;
+	}
+
+	.project-card-container > .project-card > .description {
+		padding-right: 15px;
+	}
 }
