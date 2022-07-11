@@ -289,6 +289,35 @@ a.project-side-menu:hover {
 	margin-right: 2px;
 }
 
+
+/* START CARD */
+.project-card-container#start > .project-card {
+	--gold-bg: #f5d97f;
+	--gold: #f7cc68;
+
+	animation-name: shiny-gold;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shiny-gold {
+	from {
+		background-color: var(--gold-bg);
+		box-shadow:
+			0 0 8px 7px var(--gold), /* middle magenta */
+			0 0 10px 12px #ffefc4, /* outer cyan */
+			0 0 15px 15px #fff; /* inner white */
+	}
+	to {
+		background-color: var(--project-card-bg-color);
+		box-shadow:
+			0 0 8px 5px var(--gold), /* middle magenta */
+			0 0 5px 8px #ffefc4, /* outer cyan */
+			0 0 7px 9px #fff; /* inner white */
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	.project-card-container {
 		margin-top: 80px;
