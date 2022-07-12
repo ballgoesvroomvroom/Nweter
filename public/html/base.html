@@ -495,34 +495,15 @@
 					<h1>My project title here</h1>
 					<button id="articleModalExit">[ <span>exit</span> ]</button>
 				</div>
-				<div id="inputContainer">
-					<form id="inputForm" autocomplete="off">
-						<label for="Subject">Entry's subject</label>
-						<input type="text" name="Subject" placeholder="Subj." id="subjInput" required>
-
-						<label for="title">Entry's title</label>
-						<input type="text" name="title" placeholder="Title" id="titleInput" required>
-
-						<label for="desc">Entry's Description</label>
-						<input type="text" name="desc" placeholder="Desc." id="descInput" required>
-
-						<label for="start">Start</label>
-						<input type="date" name="start" id="startDateInput" required>
-
-						<label for="end">Deadline</label>
-						<input type="date" name="end" id="endDateInput" required>
-						<p id="inputErrorDisp">&nbsp;</p>
-					</form>
-					<button id="entryCreateSubmit" type="submit">Create</button>
-				</div>
-			</div>
-			<div id="cmdPalette" class="modalContainer">
-				<div id="cmdPaletteHeader">
-					<h1>Command Palette (Ctrl + Shift + P)</h1>
-				</div>
-				<div id="cmdPaletteInput">
-					<input type="text" name="command" placeholder="Command">
-				</div>
+				<article id="articleContainer">
+					<section id="articleThumbnail">
+						<img class="cover" alt="Cover image" src="/res/img/2022/ksane_mockup.png">
+					</section>
+					<section class="articleSection">
+						<h2>Use cases</h2>
+						<p>Good for everything.<br>Study using consolidated keypoints all in one page.</p>
+					</section>
+				</article>
 			</div>
 		</div>
 	</body>
