@@ -46,14 +46,7 @@ app.use((req, res, next) => {
 
 // https://nodejs.org/api/process.html#signal-events
 function exitHandler() {
-	console.log("EXITING");
-	// const p = new Promise(res => {
-	// 	database.pushContents();
-	// 	serverDatabase.pushContents(res);
-	// }).then(() => {
-	// 	console.log("EXITING 2")
-	// 	process.exit();
-	// })
+	process.exit();
 }
 
 process.on("SIGHUP", exitHandler);
