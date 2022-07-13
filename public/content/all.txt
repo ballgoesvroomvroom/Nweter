@@ -1,0 +1,209 @@
+# redef
+/res/img/2022/ksane_mockup.png
+/res/img/2022/redef_views/homepage.png
+/res/img/2022/redef_views/uploadpage.png
+/res/img/2022/redef_views/notes.png
+/res/img/2022/redef_views/studypage.png
+/res/img/2022/redef_views/testpage.png
+/res/img/2022/redef_views/attemptedquestion.png
+/res/img/2022/redef_views/testsummary.png
+
+ReDef
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">Parses note and allow users to create tests with it. Helps a ton with retaining information</p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Features
+	</h2>
+	<ul id="" class="">
+		<li id="" class="">Chapters have parent-sibling-children relationships. Forming a recursive pattern. This allows for a general chapter (root) and sub chapters to be created.</li>
+		<li id="" class="">A <code>/study</code> page where it shows all the notes.</li>
+		<li id="" class="">Built-in highlighter to highlight each of the keywords the program can find.</li>
+		<li id="" class="">Create presets of what chapters to study on, this allows space-repitition method of studying easily.</li>
+		<li id="" class="">Notes is a simple .txt file, any editors such as Google Documents are able to be used. On addition, Google Docs allow for annotations which are not exported along the text contents as a text file.</li>
+		<li id="" class="">Support for comment blocks, denoted by triple equal signs.</li>
+		<li id="" class="">Amazing visual appeals.</li>
+	</ul>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		A little bit more into the technicalities
+	</h2>
+	<p id="" class="">Backend is written in Javascript with <a href="https://nodejs.org">NodeJs</a> with the <a href="https://expressjs.com">express</a> module and a few other modules such as express-session for session handling.</p>
+	<p id="" class="">Database is a very simple .json file since I was looking for a non-relational database and I had no other experience with other NoSQL databases. (also didn't want to spend majority of the time working out a minor aspect)</p>
+	<p id="" class="">Data is given a hierarchy system, with each chapter establishing a parent-children-sibling relationship with adajacent chapters. This helped organise the topics and set the baseline for interacting with the data, such as when creating tests or presets.</p>
+	<p id="" class="">Read a more detailed documentation on the <a href="https://github.com/ballgoesvroomvroom/redef">Github Repo</a>.</p>
+</section>
+
+# beebuzz
+/res/img/2022/ksane_mockup.png
+/res/img/2022/redef_views/homepage.png
+/res/img/2022/redef_views/uploadpage.png
+/res/img/2022/redef_views/notes.png
+/res/img/2022/redef_views/studypage.png
+/res/img/2022/redef_views/testpage.png
+/res/img/2022/redef_views/attemptedquestion.png
+/res/img/2022/redef_views/testsummary.png
+
+Beebuzz
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A simple web application that runs off NodeJs to test on chinese words stored in a prebuilt database. Includes the english and pinyin. Database only contains the chinese word with the english word.</p>
+	<p id="" class="">Pinyin was sourced from <a href="https://cc-cedict.org/wiki/">CC-CEDICT</a> dictionary and I wrote a custom parser in Python to parse it.</p>
+</section>
+
+# ksane
+/res/img/2022/ksane_mockup.png
+/res/img/2022/redef_views/homepage.png
+/res/img/2022/redef_views/uploadpage.png
+/res/img/2022/redef_views/notes.png
+/res/img/2022/redef_views/studypage.png
+/res/img/2022/redef_views/testpage.png
+/res/img/2022/redef_views/attemptedquestion.png
+/res/img/2022/redef_views/testsummary.png
+
+KSane
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">Used as a tracker to help plan the long-term study goals on a day-by-day basis. This allowed me to split my chapters to study between the span of days, upcoming till the examinations.</p>
+	<p id="" class="">Written in Javascript, with NodeJs as the environment.</p>
+</section>
+
+# kotlin
+
+🌟 Knowledge increased!
+
+<section id="" class="articleSection">
+	<p id="" class="">Learnt Kotlin and was very impressed at its features which I had never experienced before!</p>
+	<p id="" class="">Ported a custom parser I had written in Python (to parse contents for my first portfolio draft) to Kotlin as practice.</p>
+	<p id="" class="">Wanted to start android development but the learning curve was definitely there, hence the practice.</p>
+</section>
+
+# ap_malporter
+/res/img/2021/ap_malporter.png
+
+AP_MALPorter
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A CLI written in Python 	with a few commands</p>
+	<p id="" class="">Reads exported user data from <a href="https://anime-planet.com/">AnimePlanet</a>(AP) and ports it over to <a href="https://myanimelist.net/">MyAnimeList</a>(MAL).</p>
+	<p id="" class="">Ported data includes watch status, amount of episodes watched, amount of rewatches, and ratings.</p>
+	<p id="" class="">Made possible with MAL's official API.</p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		How it works
+	</h2>
+	<p id="" class="">A <code>.json</code> file acts as a lookup database that matches names from AP to the corresponding ID in MAL's database since the both sites/databases have slight name discrepancies.</p>
+	<p id="" class="">The program automatically tries to query for the name in MAL using its API and only adds it to the database if an exact match between the names exists. Else it would present the paginated query results for the user to select from.</p>
+	<p id="" class="">On a successful match, the name to id mapping would be added to the database, which would be referenced on subsequent runs, making the process very, very fast.</p>
+	<p id="" class="">Only at the end of the <code>port</code> command, it would then push all entries to MAL.</p>
+</section>
+
+# fll21
+
+🏆 Teamwork!
+
+<section id="" class="articleSection">
+	<p id="" class="">Worked as a team to represent my school in First Lego League 2021 competition.</p>
+	<p id="" class="">Walked out of it with strong bonds and participation awards</p>
+</section>
+
+# mlamypen
+/res/img/2021/fountainpen_render.png
+
+🎏 Personal best!
+
+<section id="" class="articleSection">
+	<p id="" class="">Modelled, textured and rendered a LAMY Safari Fountain pen.</p>
+</section>
+
+# htmlcss
+
+🌟 Challenge unlocked!
+
+<section id="" class="articleSection">
+	<p id="" class="">Started getting my hands wet with frontend web designing.</p>
+	<p id="" class="">HTML and CSS</p>
+</section>
+
+# hacknflag
+
+🏆 Solo steps!
+
+<section id="" class="articleSection">
+	<p id="" class="">Participated in Hack'N'Flag event hosted by Ngee Ann Polytechnic.</p>
+</section>
+
+# coderz
+
+🏆 Competition!
+
+<section id="" class="articleSection">
+	<p id="" class="">Participated in CoderZ in teams, representing my school and managed to get into the nationals!</p>
+</section>
+
+# youdown
+/res/img/2021/mp3.png
+
+YouDownloader
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">Downloads YouTube videos and host them onto Dropbox which allows for a downloadable link to be shared!</p>
+	<p id="" class="">Made this for my mom who needed to stream music offline.</p>
+	<p id="" class="">Made possible with Dropbox's official API.</p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		All about it
+	</h2>
+	<p id="" class="">Written in Python with a dump full of modules.</p>
+</section>
+
+# top
+
+🏆 Top of the top!
+
+<section id="" class="articleSection">
+	<p id="" class="">Scored highest in Computing for year end overall!</p>
+	<p id="" class="">With a score of > 90.</p>
+</section>
+
+# tablehand
+/res/img/2021/tablehandler.png
+
+Table Handler
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A utility module that consists of multiple table manipulator functions such as split, slice, shift, and sort.</p>
+	<p id="" class="">Featuring 5 different sorting algorithms: bubble, insertion, heap, quick, and selection sort</p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		It's rise
+	</h2>
+	<p id="" class="">I saw the lack of built in support for table/list manipulation such as slicing and hence took the opportunity to write something rather useful and can be easily integrated into existing projects without the need of conforming to a new datatype etc.</p>
+	<p id="" class="">Of course, this had its pros and cons. Such as I am unable to directly call the method on the list itself and would require an object to call the methods, passing the array as an argument. Though the <code>table</code> library already does that so anyone famaliar with Lua would have gotten used to it.</p>
+	<p id="" class="">Main features were just for sorting purposes but I quickly saw how I could easily expand it to include other features such as shifting.</p>
+	<p id="" class="">Wrote the module with efficiency and applicability in mind. For instance, it only modifies the array when explicitly toggled <code>.ModifyArray</code> to true in the TableHandler object, otherwise, the array would have been deep copied depending on the methods. Or how non-numerical datatypes in the list are seamlessly filtered out, only appending to the sorted list if <code>.IncludeNonSorted</code> is toggled true.</p>
+</section>

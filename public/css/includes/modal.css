@@ -16,11 +16,10 @@
 	flex-direction: column;
 
 	width: 60%;
-	max-height: calc(100% - 40px);
+	max-height: calc(100% - 20px);
 
 	overflow-y: auto;
 
-	padding: 10px;
 	margin: 10px auto;
 
 	border-radius: .4rem;
@@ -28,39 +27,40 @@
 	background-color: var(--primary-color);
 }
 
-#modalHeader {
+#modalheader-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
 
+	padding: 10px;
 	font-weight: 700;
 }
 
-#modalExit {
+#articleModalExit {
 	transition-property: color;
 	transition-duration: 150ms;
 	transition-timing-function: ease-in;
 }
 
-#modalExit > span {
+#articleModalExit > span {
 	transition-property: padding;
 	transition-duration: 150ms;
 	transition-timing-function: ease-in;
 }
 
-#modalExit:hover {
+#articleModalExit:hover {
 	color: var(--heavy-warning);
 }
 
-#modalExit:hover > span {
+#articleModalExit:hover > span {
 	padding: 0 5px;
 }
 
 #articleContainer {
-	width: 100%;
+	width: calc(100% - 20px);
 
-	padding-top: 10px;
+	padding: 10px;
 }
 
 #articleThumbnail {
@@ -75,6 +75,9 @@
 
 .articleSection {
 	padding-top: 10px;
-	padding-bottom: 1500px;
+}
+
+.articleSection > p {
+	padding-top: 10px;
 }
 

@@ -23,14 +23,9 @@ $(document).ready(() => {
 		"articleModal": $("#articleModal"),
 		"articleModalExit": $("#articleModalExit"),
 
-		"subjInput": $("#subjInput"),
-		"titleInput": $("#titleInput"),
-		"descInput": $("#descInput"),
-		"startDateInput": $("#startDateInput"),
-		"endDateInput": $("#endDateInput"),
-
-		"inputErrorDisp": $("#inputErrorDisp"),
-		"entryCreateSubmit": $("#entryCreateSubmit")
+		"articleHeader": $("#articleHeader"),
+		"articleThumbnail": $("#articleThumbnail"),
+		"articleContainer": $("#articleContainer")
 	}
 
 	const $externalReferences = {
@@ -52,10 +47,60 @@ $(document).ready(() => {
 	// exit buttons
 	articleModal.registerExitButtons($selectors["articleModalExit"]);
 
-	// trigger buttons
+	// trigger buttons (card expand button)
 	$selectors["moreButtons"].on("click", function(e) {
-		articleModal.show(true);
-	})
+		var trigger = e.currentTarget;
+		var container = trigger.parentNode.parentNode;
+
+		var prepend = "card-"
+		console.log(trigger, trigger.parentNode, container)
+		var rawID = container.id.slice(prepend.length);
+
+		// load in content
+		$selectors["articleContainer"].empty();
+		fetch(`/res/card-data/?i=${rawID}`, {
+			method: "GET"
+		}).then(r => {
+			if (r.status === 200) {
+				return r.text();
+			} else {
+				return Promise.reject("Failed to get contents")
+			}
+		}).then(txt => {
+			// text
+
+			// first few lines are images (an empty line delimiter is used to separate image definitions with the actual html content)
+			let images = [];
+			let lines = txt.split(/\r?\n/gm);
+			for (let i = 0; i < lines.length; i++) {
+				let line = lines[i];
+				if (line === "") {
+					// delimiter for images and actual content
+					break;
+				} else {
+					images.push(line);
+				}
+			}
+
+			let header = lines[images.length +1];
+			let content = lines.slice(images.length +3).join("\n"); // +1 to skip the empty line delimiter; +2 to skip the header and the following empty line delimiter
+
+			$selectors["articleHeader"].text(header);
+
+			if (images.length === 0) {
+				// no images
+				$selectors["articleThumbnail"].addClass("hidden");
+			} else {
+				// add in the images
+
+				$selectors["articleThumbnail"].removeClass("hidden");
+			}
+
+			$selectors["articleContainer"].html(content);
+
+			articleModal.show(true);
+		})
+	});
 
 	function switchYear(year) {
 		// year: number; the year to jump to
@@ -134,11 +179,10 @@ $(document).ready(() => {
 	});
 
 	var prevMousePos = 0;
-	var trackHead_update = setInterval(() => {
-		if (isTrackHeadHeldDown) {
-			console.log("updated")
-		}
-	}, 100)
+	// var trackHead_update = setInterval(() => {
+	// 	if (isTrackHeadHeldDown) {
+	// 	}
+	// }, 100)
 
 	// initialise call
 	switchYear(2022);
