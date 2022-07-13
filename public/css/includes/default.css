@@ -8,7 +8,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -29,9 +29,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
 }
 blockquote, q {
 	quotes: none;
@@ -73,6 +70,9 @@ button {
 	--subtitle-text-color: #787878;
 	--secondary-text-color: #f67280;
 	--accent-text-color: #6c5b7b;
+
+	--code-text-color: #2f4c8d;
+	--code-background-color: #ffe9e9;
 
 	--project-card-bg-color: #fff;
 
@@ -152,7 +152,6 @@ a {
 	cursor: pointer;
 	border-radius: 5px;
 	color: var(--accent-color);
-	font-size: 1.2em;
 }
 
 body, html {
@@ -164,6 +163,24 @@ body, html {
 	color: var(--primary-text-color);
 	word-wrap: break-word;
 	background-color: var(--primary-color);
+}
+
+ol, ul {
+	list-style-type: circle;
+}
+
+li {
+	display: list-item;
+}
+
+code {
+	padding: 4px;
+
+	border-radius: .4rem;
+	background-color: var(--code-background-color);
+
+	color: var(--code-text-color);
+	font-family: monospace;
 }
 
 h1 {
@@ -182,7 +199,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1.2rem;
+	font-size: 2rem;
 	font-weight: 700;
 }
 
