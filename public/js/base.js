@@ -6,6 +6,9 @@ const START = 2022;
 let current = START; // operate using strings
 let current_str = current.toString();
 
+
+const cardData_SSK = "cardData";
+
 $(document).ready(() => {
 	const $selectors = {
 		"track-year-disp": $("#track-year-disp"),
@@ -25,7 +28,7 @@ $(document).ready(() => {
 
 		"articleHeader": $("#articleHeader"),
 		"articleThumbnail": $("#articleThumbnail"),
-		"articleContainer": $("#articleContainer")
+		"articleContainer": $("#articleContainer"),
 	}
 
 	const $externalReferences = {
@@ -47,18 +50,24 @@ $(document).ready(() => {
 	// exit buttons
 	articleModal.registerExitButtons($selectors["articleModalExit"]);
 
-	// trigger buttons (card expand button)
-	$selectors["moreButtons"].on("click", function(e) {
-		var trigger = e.currentTarget;
-		var container = trigger.parentNode.parentNode;
+	// get card data, either from cache or from server
+	function getCardData(name) {
+		// returns the text
+		var cached_cardData = sessionStorage.getItem(cardData_SSK);
 
-		var prepend = "card-"
-		console.log(trigger, trigger.parentNode, container)
-		var rawID = container.id.slice(prepend.length);
+		if (cached_cardData) {
+			cached_cardData = JSON.parse(cached_cardData);
 
-		// load in content
-		$selectors["articleContainer"].empty();
-		fetch(`/res/card-data/?i=${rawID}`, {
+			if (cached_cardData && cached_cardData.hasOwnProperty(name)) {
+				return new Promise(res => res(cached_cardData[name]));
+			} else if (cached_cardData == null) {
+				cached_cardData = {};
+			}
+		} else {
+			cached_cardData = {};
+		}
+
+		return fetch(`/res/card-data/?i=${name}`, {
 			method: "GET"
 		}).then(r => {
 			if (r.status === 200) {
@@ -67,7 +76,27 @@ $(document).ready(() => {
 				return Promise.reject("Failed to get contents")
 			}
 		}).then(txt => {
+			// add to cache
+			cached_cardData[name] = txt;
+			sessionStorage.setItem(cardData_SSK, JSON.stringify(cached_cardData));
+
+			return txt;
+		})
+	}
+	
+	// trigger buttons (card expand button)
+	$selectors["moreButtons"].on("click", (e) => {
+		var trigger = e.currentTarget;
+		var container = trigger.parentNode.parentNode;
+
+		var prepend = "card-"
+		var rawID = container.id.slice(prepend.length);
+
+		// load in content
+		$selectors["articleContainer"].empty();
+		getCardData(rawID).then(txt => {
 			// text
+			
 
 			// first few lines are images (an empty line delimiter is used to separate image definitions with the actual html content)
 			let images = [];
@@ -92,7 +121,8 @@ $(document).ready(() => {
 				$selectors["articleThumbnail"].addClass("hidden");
 			} else {
 				// add in the images
-
+				
+				
 				$selectors["articleThumbnail"].removeClass("hidden");
 			}
 
