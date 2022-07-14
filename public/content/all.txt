@@ -68,7 +68,7 @@ KSane
 
 # kotlin
 
-🌟 Knowledge increased!
+🌟 Kotlin
 
 <section id="" class="articleSection">
 	<p id="" class="">Learnt Kotlin and was very impressed at its features which I had never experienced before!</p>
@@ -123,7 +123,7 @@ AP_MALPorter
 
 # htmlcss
 
-🌟 Challenge unlocked!
+🌟 HTML & CSS
 
 <section id="" class="articleSection">
 	<p id="" class="">Started getting my hands wet with frontend web designing.</p>
@@ -200,7 +200,7 @@ Table Handler
 
 # javascript
 
-🌟 New skill acquired!
+🌟 Javascript
 
 <section id="" class="articleSection">
 	<p id="" class="">Full-dived into the vast world of Javascript.</p>
@@ -241,14 +241,15 @@ Expenses Logger
 	<h2 id="" class="">
 		Description
 	</h2>
-	<p id="" class="">A simple CLI with a few commands. Using session based object to identify different dates and days</p>
+	<p id="" class="">A simple CLI with a few commands. Using session based object to identify different days.</p>
 </section>
 <section id="" class="articleSection">
 	<h2 id="" class="">
 		The Start
 	</h2>
-	<p id="" class="">I came home one day feeling bumped out about losing track of how much money I've spent. A magical amount of money vanished from my wallet.</p>
+	<p id="" class="">I came home one day feeling bumped out about losing track of how much money I've spent. I wanted something intuitive to keep track of my own expenses.</p>
 	<p id="" class="">Hence the creation of this.</p>
+	<p id="" class="">However, it being a CLI really restricted the accessbility though I could run it on Termux on my Phone, it was still a great inconvenience as compared to other applications.</p>
 </section>
 
 # heart
@@ -284,7 +285,7 @@ Heart <3
 
 # roblox
 
-🌟 New environment!
+🌟 New environment
 
 <section id="" class="articleSection">
 	<p id="" class="">Moved from the Roblox Game engine and starting venturing into other ICT-related activities!</p>
@@ -295,7 +296,7 @@ Heart <3
 
 # python
 
-🌟 Progress!
+🌟 Python
 
 <section id="" class="articleSection">
 	<p id="" class="">Moving on, I've started dabbling with Python. I started off with interacting with Discord's API through a Python wrapper. Since I was using Discord as my main medium of communication between fellow game developers that I had met on the Roblox platform, I was naturally enticed to create something on the Discord platform as well.</p>
