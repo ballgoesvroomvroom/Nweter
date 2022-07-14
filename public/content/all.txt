@@ -18,6 +18,14 @@ ReDef
 </section>
 <section id="" class="articleSection">
 	<h2 id="" class="">
+		Showcase
+	</h2>
+	<p id="" class="">Try it out with a demo account.</p>
+	<p id="" class="">account: <code>demouser</code></p>
+	<p id="" class="">password: <code>eda2ft</code></p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
 		Features
 	</h2>
 	<ul id="" class="">
