@@ -167,6 +167,7 @@ YouDownloader
 </section>
 
 # top
+/res/img/2021/computing.jpg
 
 🏆 Top of the top!
 
