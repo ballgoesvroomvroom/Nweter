@@ -5,9 +5,8 @@ const path = require("path");
 const html = path.join(root, "/public/html/")
 
 class Views {
-	static home = path.join(html, "base.html");
-	static login = path.join(html, "views/login.html");
-	static register = path.join(html, "views/register.html");
+	static home = path.join(html, "./views/home.html");
+	static base = path.join(html, "base.html");
 
 	static notFound = path.join(html, "includes/404.html");
 }
