@@ -207,3 +207,100 @@ Table Handler
 	<p id="" class="">Main features were just for sorting purposes but I quickly saw how I could easily expand it to include other features such as shifting.</p>
 	<p id="" class="">Wrote the module with efficiency and applicability in mind. For instance, it only modifies the array when explicitly toggled <code>.ModifyArray</code> to true in the TableHandler object, otherwise, the array would have been deep copied depending on the methods. Or how non-numerical datatypes in the list are seamlessly filtered out, only appending to the sorted list if <code>.IncludeNonSorted</code> is toggled true.</p>
 </section>
+
+# colacan
+/res/img/2020/colacan_render.png
+
+🎏 New heights of realism!
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">My first ever go at photorealism scenes.</p>
+	<p id="" class="">Water droplets were made from particles with the can texture itself sourced from the Internet (which I had lost references to).</p>
+	<p id="" class="">Materials took a lot of fine tuning to get to where it is right now.</p>
+</section>
+
+# curvy
+/res/img/2020/python_curvetext.png
+
+Curvy
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A rather simple program written in Python back when I was just starting out.</p>
+</section>
+
+# explog
+/res/img/2020/python_explog.png
+
+Expenses Logger
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A simple CLI with a few commands. Using session based object to identify different dates and days</p>
+</section>
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		The Start
+	</h2>
+	<p id="" class="">I came home one day feeling bumped out about losing track of how much money I've spent. A magical amount of money vanished from my wallet.</p>
+	<p id="" class="">Hence the creation of this.</p>
+</section>
+
+# heart
+/res/img/2020/python_heart.png
+
+Heart <3
+
+<section id="" class="articleSection">
+	<h2 id="" class="">
+		Description
+	</h2>
+	<p id="" class="">A plotter inspired by graphing calculators. The heart itself is composed by two functions of x.</p>
+	<p id="" class="">The plotter finds the y value and plots it accordingly with space indents.</p>
+</section>
+
+# spinners
+
+🎏 New skills!
+
+<section id="" class="articleSection">
+	<p id="" class="">Scene filled with curves.</p>
+	<p id="" class="">With sequenced end property.</p>
+</section>
+
+# moc
+
+🏆 First step!
+
+<section id="" class="articleSection">
+	<p id="" class="">Participated as a team in the Marine and Offshore Challenge 2019 hosted locally by the School of Engineering, Ngee Ann Polytechnic.</p>
+	<p id="" class="">Walked away with the best hull design award!</p>
+</section>
+
+# roblox
+
+🌟 New environment!
+
+<section id="" class="articleSection">
+	<p id="" class="">Moved from the Roblox Game engine and starting venturing into other ICT-related activities!</p>
+	<p id="" class="">Roblox was where I started and gotten an understanding for the many aspects of programming. Such as networking, graphics rendering, or even object oriented programming.</p>
+	<p id="" class="">I've collaborated with fellow game developers before in order to create games that were at least functional. It also introduced me to the world of 3D assets where I understood the modelling workflow, importance of good topology and even rigging a character.</p>
+	<p id="" class="">All in all, Roblox has opened my eyes to many different fields in game development and dipped me a little into the vast world of Internet.</p>
+</section>
+
+# python
+
+🌟 Progress!
+
+<section id="" class="articleSection">
+	<p id="" class="">Moving on, I've started dabbling with Python. I started off with interacting with Discord's API through a Python wrapper. Since I was using Discord as my main medium of communication between fellow game developers that I had met on the Roblox platform, I was naturally enticed to create something on the Discord platform as well.</p>
+	<p id="" class="">It was a rough start since I was barely adapting to the changes in the syntax, not to mention the multitude of nuances of behavior I had to discover.</p>
+	<p id="" class="">But now, I am both confident and fluent in Python, writing up quick functions to compute or proof something, or even coming up with full flexed programs to use it as an external utility tool.</p>
+</section>
