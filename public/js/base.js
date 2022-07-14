@@ -28,7 +28,11 @@ $(document).ready(() => {
 
 		"articleHeader": $("#articleHeader"),
 		"articleThumbnail": $("#articleThumbnail"),
+		"articleThumbnail-carousell": $("#articleThumbnail-carousell"),
 		"articleContainer": $("#articleContainer"),
+
+		"articleCarousellSelection": $(".carousell-selections"),
+		"articleCarousellActiveSelection": $("#articleThumbnail-activeSelection"),
 	}
 
 	const $externalReferences = {
@@ -95,11 +99,8 @@ $(document).ready(() => {
 		// load in content
 		$selectors["articleContainer"].empty();
 		getCardData(rawID).then(txt => {
-			// text
-			
-
 			// first few lines are images (an empty line delimiter is used to separate image definitions with the actual html content)
-			let images = [];
+			var images = [];
 			let lines = txt.split(/\r?\n/gm);
 			for (let i = 0; i < lines.length; i++) {
 				let line = lines[i];
@@ -119,11 +120,70 @@ $(document).ready(() => {
 			if (images.length === 0) {
 				// no images
 				$selectors["articleThumbnail"].addClass("hidden");
+				$selectors["articleThumbnail-carousell"].addClass("hidden");
 			} else {
 				// add in the images
-				
+				var children = $selectors["articleThumbnail"].children();
+
+				for (let i = 0; i < Math.min(images.length, children.length); i++) {
+					children[i].setAttribute("src", images[i]);
+				}
+
+				// see if theres excess images
+
+				if (children.length > images.length) {
+					for (let i = 0; i < children.length - images.length; i++) {
+						children[images.length +i].remove();
+					}
+				} else if (images.length > children.length) {
+					// not enough images
+					for (let i = 0; i < images.length - children.length; i++) {
+						// create new images
+						const $img = $("<img>", {
+							"class": "cover",
+							"src": images[children.length +i]
+						});
+
+						$img.appendTo($selectors["articleThumbnail"]);
+					}
+				}
+
+				// add/remove extra caro
+				// update carousell children count
+				var caro_children = $(".carousell-selections");
+				console.log(images.length, caro_children.length);
+
+				if (caro_children.length > images.length) {
+					for (let i = 0; i < caro_children.length -images.length; i++) {
+						caro_children[images.length +i].remove();
+					}
+				} else if (images.length > caro_children.length) {
+					for (let i = 0; i < images.length -caro_children.length; i++) {
+						let e = i +caro_children.length;
+						const $button = $("<button>", {
+							"class": "carousell-selections"
+						});
+						$button.appendTo($selectors["articleThumbnail-carousell"]);
+
+						$button.on("click", () => {
+							// scroll to a specific image
+							$selectors["articleThumbnail"][0].scrollTo($selectors["articleThumbnail"].outerWidth() *e, 0)
+
+							// change position of active selection
+							var t = $(".carousell-selections").length;
+							if (t % 2 === 0) {
+								// even number
+								$selectors["articleCarousellActiveSelection"].css("left", `calc(50% - ${12 + 16 *(Math.floor($(".carousell-selections").length /2) -1)}px + ${16 *e}px`);
+							} else {
+								$selectors["articleCarousellActiveSelection"].css("left", `calc(50% - ${4 + 16 *Math.floor($(".carousell-selections").length /2)}px + ${16 *e}px`);
+							}
+						})
+					}
+				}				
+				$selectors["articleThumbnail-carousell"].children()[1].click(); // trigger the first button
 				
 				$selectors["articleThumbnail"].removeClass("hidden");
+				$selectors["articleThumbnail-carousell"].removeClass("hidden");
 			}
 
 			$selectors["articleContainer"].html(content);
