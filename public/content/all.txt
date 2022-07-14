@@ -41,14 +41,7 @@ ReDef
 </section>
 
 # beebuzz
-/res/img/2022/ksane_mockup.png
-/res/img/2022/redef_views/homepage.png
-/res/img/2022/redef_views/uploadpage.png
-/res/img/2022/redef_views/notes.png
-/res/img/2022/redef_views/studypage.png
-/res/img/2022/redef_views/testpage.png
-/res/img/2022/redef_views/attemptedquestion.png
-/res/img/2022/redef_views/testsummary.png
+/res/img/2022/beebuzz_mockup.png
 
 Beebuzz
 
@@ -62,13 +55,6 @@ Beebuzz
 
 # ksane
 /res/img/2022/ksane_mockup.png
-/res/img/2022/redef_views/homepage.png
-/res/img/2022/redef_views/uploadpage.png
-/res/img/2022/redef_views/notes.png
-/res/img/2022/redef_views/studypage.png
-/res/img/2022/redef_views/testpage.png
-/res/img/2022/redef_views/attemptedquestion.png
-/res/img/2022/redef_views/testsummary.png
 
 KSane
 
@@ -91,7 +77,7 @@ KSane
 </section>
 
 # ap_malporter
-/res/img/2021/ap_malporter.png
+/res/img/2021/ap_malporter_mockup.png
 
 AP_MALPorter
 
@@ -125,6 +111,9 @@ AP_MALPorter
 
 # mlamypen
 /res/img/2021/fountainpen_render.png
+/res/img/2021/texturedRender_signed.png
+/res/img/2021/texturedRendered4k_signed.png
+/res/img/2021/basemodel_showcase.png
 
 🎏 Personal best!
 
@@ -206,6 +195,14 @@ Table Handler
 	<p id="" class="">Of course, this had its pros and cons. Such as I am unable to directly call the method on the list itself and would require an object to call the methods, passing the array as an argument. Though the <code>table</code> library already does that so anyone famaliar with Lua would have gotten used to it.</p>
 	<p id="" class="">Main features were just for sorting purposes but I quickly saw how I could easily expand it to include other features such as shifting.</p>
 	<p id="" class="">Wrote the module with efficiency and applicability in mind. For instance, it only modifies the array when explicitly toggled <code>.ModifyArray</code> to true in the TableHandler object, otherwise, the array would have been deep copied depending on the methods. Or how non-numerical datatypes in the list are seamlessly filtered out, only appending to the sorted list if <code>.IncludeNonSorted</code> is toggled true.</p>
+</section>
+
+# javascript
+
+🌟 New skill acquired!
+
+<section id="" class="articleSection">
+	<p id="" class="">Full-dived into the vast world of Javascript.</p>
 </section>
 
 # colacan
