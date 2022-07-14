@@ -61,12 +61,14 @@ class CardData {
 		}
 
 		this.parsedContent = localParsed;
+		this.parsed = true;
 	}
 
 	static getData(name) {
 		// get data by id
-
-		this.parse();
+		if (!this.parsed) {
+			this.parse();
+		}
 
 		return this.parsedContent[name];
 	}
