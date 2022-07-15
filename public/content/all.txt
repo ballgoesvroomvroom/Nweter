@@ -309,5 +309,5 @@ Heart <3
 <section id="" class="articleSection">
 	<p id="" class="">Moving on, I've started dabbling with Python. I started off with interacting with Discord's API through a Python wrapper. Since I was using Discord as my main medium of communication between fellow game developers that I had met on the Roblox platform, I was naturally enticed to create something on the Discord platform as well.</p>
 	<p id="" class="">It was a rough start since I was barely adapting to the changes in the syntax, not to mention the multitude of nuances of behavior I had to discover.</p>
-	<p id="" class="">But now, I am both confident and fluent in Python, writing up quick functions to compute or proof something, or even coming up with full flexed programs to use it as an external utility tool.</p>
+	<p id="" class="">Now, I am both confident and fluent in Python, writing up quick functions to compute or proof something, or even coming up with full flexed programs to use it as an external utility tool.</p>
 </section>
