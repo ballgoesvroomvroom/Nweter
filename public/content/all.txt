@@ -1,5 +1,5 @@
 # redef
-/res/img/2022/ksane_mockup.png
+/res/img/2022/redef_mockup.png
 /res/img/2022/redef_views/homepage.png
 /res/img/2022/redef_views/uploadpage.png
 /res/img/2022/redef_views/notes.png
